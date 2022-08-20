@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="5dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivThumb"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/ic_launcher" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSubscript"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/ivThumb"
+        app:layout_constraintEnd_toEndOf="@id/ivThumb"
+        tools:text="www.google.com" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCreated"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        app:layout_constraintBottom_toTopOf="@id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivThumb"
+        app:layout_constraintTop_toTopOf="@id/ivThumb"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Nov 8, 2021 at 10:36 AM" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="2"
+        app:layout_constraintBottom_toTopOf="@id/tvSubTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvCreated"
+        app:layout_constraintTop_toBottomOf="@id/tvCreated"
+        tools:text="title...title...title...title...title...title...title..." />
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        app:layout_constraintBottom_toBottomOf="@id/ivThumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:text="subtitle..." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
